@@ -34,8 +34,9 @@
   align-items: flex-start;
 }
 
-.temperature-container img {
-  margin-right: 10px;
+.temperature-container canvas {
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 .Weather .temperature {
