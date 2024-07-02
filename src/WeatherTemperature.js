@@ -1,6 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function WeatherTemperature(props) {
+  return (
+    <div className="temperature-container">
+      <span className="temperature">{props.celcius}</span>
+      <span className="unit">°C</span>
+    </div>
+  );
+  /*
+  CURRENT TEMPERATURE CONVERSION CODE TO FAHRENHEIT:
+
+  { useState } removed
+
   const [unit, setUnit] = useState("celsius");
 
   function showFahrenheit(event) {
@@ -18,17 +29,12 @@ export default function WeatherTemperature(props) {
   }
 
   if (unit === "celsius") {
-    return (
-      <div className="temperature-container">
-        <span className="temperature">{props.celcius}</span>
-        <span className="unit">
-          °C | °
-          <a href="/" onClick={showFahrenheit}>
-            F
-          </a>
-        </span>
-      </div>
-    );
+    
+    RETURN CODE HERE WITH THIS CODE INSIDE THE SPAN AFTER CELSIUS:
+    | °
+        <a href="/" onClick={showFahrenheit}>
+          F
+        </a>
   } else {
     return (
       <div className="temperature-container">
@@ -43,4 +49,5 @@ export default function WeatherTemperature(props) {
       </div>
     );
   }
+  */
 }
