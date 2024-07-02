@@ -9,9 +9,9 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
@@ -31,7 +31,6 @@ export default function Weather(props) {
   function handleSubmit(event) {
     event.preventDefault();
     search();
-    //Search for a city
   }
 
   function handleCityChange(event) {
@@ -62,7 +61,7 @@ export default function Weather(props) {
           </div>
         </form>
         <Weatherinfo data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
