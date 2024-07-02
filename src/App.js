@@ -7,7 +7,11 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="London" />
         <footer>
-          This project was coded by Laetitia Saunders and is{" "}
+          This project was coded by{" "}
+          <a href="https://github.com/ls-95" target="_blank" rel="noreferrer">
+            Laetitia Saunders
+          </a>{" "}
+          and is{" "}
           <a
             href="https://github.com/ls-95/weather-application-react"
             target="_blank"
